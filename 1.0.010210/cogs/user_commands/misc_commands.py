@@ -56,13 +56,6 @@ class User_MiscCommands:
         else:
                 await self.bot.say('{}, you should buy **{}**.'.format(ctx.message.author.mention, pack))
 
-    @u_MiscCMDs.command(pass_context=True, name='secret', aliases=['SECRET', 'Secret'])
-    async def _miscSECRET(self, ctx):
-        """A secret command that will PM the author."""
-        PM = 'WOAH \U0001F62E! You found the secret command, you\'re cool. \n\n(P.S. - Don\'t tell anyone about it.)'
-        await self.bot.send_message(ctx.message.server.get_member(ctx.message.author.id), PM)
-        await self.bot.delete_message(ctx.message)
-
     @u_MiscCMDs.command(pass_context=True, name='plumbob', aliases=['Plumbob', 'PLUMBOB'])
     async def _misc_IMGplumbob(self, ctx):
         """Returns a gif of the plumbob from the Sims 4."""
