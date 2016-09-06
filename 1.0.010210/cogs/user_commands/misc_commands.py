@@ -15,7 +15,7 @@ class User_MiscCommands:
     @u_MiscCMDs.command(pass_context=True, name='source', aliases=['Source', 'SOURCE'])
     async def _botsource(self, ctx):
         """Returns the source code link for the bot."""
-        source_link = "https://github.com/Simalary/Servo"
+        source_link = "https://github.com/Simalary/SimsVIP.Servo"
         await self.bot.say('{0.message.author.mention}, my source code is available at <{1}>.'.format(ctx, source_link))
 
     @u_MiscCMDs.command(pass_context=True, name='choose', aliases=['Choose', 'CHOOSE'])
