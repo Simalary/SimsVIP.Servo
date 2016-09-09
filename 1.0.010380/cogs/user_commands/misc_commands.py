@@ -38,11 +38,12 @@ class User_MiscCommands:
         if ctx.message.author == self.bot.user:
                 return
         if question is None:
-            await self.bot.say('{}, you need to specify a yes or no question. (Example: **!8ball Will Chris ever bee as cool a me?**)')
-        answers = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes, definitely.', 'As I see it, yes.', 'Most likely.', 'Outlook good.', 'Yes.', 'Signs point to yes.',
-                       'Reply hazy, try again.', 'Ask again later.', 'Better not tell you know.', 'Cannot predict now.', 'Concentrate and try again.',
-                       'Don\'t count on it.', 'My reply is no.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.', 'The chances are the same as you buying every pack, so not likely.']
-        await self.bot.say('{}, {}'.format(ctx.message.author.mention, random.choice(answers).lower()))
+            await self.bot.say('{}, you need to specify a yes or no question. (Example: **!8ball Will Chris ever bee as cool as me?**)'.format(ctx.message.author.mention))
+        else:
+            answers = ['It is certain.', 'It is decidedly so.', 'Without a doubt.', 'Yes, definitely.', 'As I see it, yes.', 'Most likely.', 'Outlook good.', 'Yes.', 'Signs point to yes.',
+                            'Reply hazy, try again.', 'Ask again later.', 'Better not tell you know.', 'Cannot predict now.', 'Concentrate and try again.',
+                            'Don\'t count on it.', 'My reply is no.', 'My sources say no.', 'Outlook not so good.', 'Very doubtful.', 'The chances are the same as you buying every pack, so not likely.']
+            await self.bot.say('{}, {}'.format(ctx.message.author.mention, random.choice(answers).lower()))
 
     @u_MiscCMDs.command(pass_context=True, name='randompack', aliases=['pack', 'PACK', 'RandomPack', 'Pack', 'RAONDOMPACK'])
     async def randompack(self, ctx):
